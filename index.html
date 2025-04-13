@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Félicia's Magical 30th Birthday Quest</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Optional: Link Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sorting Hat above Banner -->
+    <img id="banner-sorting-hat" src="assets/sorting_hat.png" alt="Sorting Hat">
+
+    <!-- Birthday Wish Banner -->
+    <div class="birthday-banner">✨ Happy 30th Birthday, Félicia! ✨</div>
+
+    <div id="container">
+
+        <!-- Welcome Screen -->
+        <section id="welcome-screen" class="screen active">
+            <h1 class="magical-text">Greetings, Félicia Jund!</h1>
+            <p>A most magical birthday quest awaits you. Prove your wisdom, and a secret destination shall be revealed!</p>
+            <p>On your 30th year, let the adventure begin...</p>
+            <button id="start-button" class="hp-button">Accept Your Quest</button>
+        </section>
+
+        <!-- Envelope Overlay (Initially Hidden) -->
+        <section id="envelope-overlay" class="screen">
+            <div class="envelope">
+                <div class="envelope-flap top"></div>
+                <div class="envelope-letter">
+                    <h2>Your Quest Instructions</h2>
+                    <p>Answer 10 riddles correctly.</p>
+                    <p>Each correct answer reveals a piece of secret coordinates.</p>
+                    <p>Stuck? <strong class="highlight">Look below the question for a hint!</strong> 🪄</p> <!-- Updated hint instruction -->
+                    <p>Quick! <strong class="highlight">Catch the Golden Snitch</strong> if you see it flying by - it might offer helpful choices!</p>
+                    <p>Good luck!</p>
+                    <button id="continue-to-quiz" class="hp-button">Begin Riddles</button>
+                </div>
+                <div class="envelope-flap bottom"></div>
+            </div>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+             <!-- Golden Snitch -->
+            <img src="assets/golden_snitch.png" alt="Catch the Snitch!" id="golden-snitch" class="snitch-inactive">
+
+            <div id="quiz-content">
+                <h2 id="question-number" class="magical-text-dark">Question X of 10</h2>
+                <p id="question-text">The question text will appear here...</p>
+                <!-- Context Hint Area -->
+                <p id="context-hint" class="hint-text-style"></p>
+                <input type="text" id="answer-input" placeholder="Type your answer spell...">
+                <!-- Multiple Choice Options Area -->
+                <div id="multiple-choice-options"></div>
+                <button id="submit-button" class="hp-button">Cast Spell</button>
+                <p id="feedback-message"></p>
+                <div id="coordinates-display">
+                    <h3>Revealed Coordinates:</h3>
+                    <p id="revealed-coordinates">-</p>
+                </div>
+            </div>
+             <!-- Removed Hint Area div and Shake Instruction paragraph -->
+        </section>
+
+        <!-- Final Screen -->
+        <section id="final-screen" class="screen">
+             <!-- Fireworks container -->
+            <div id="fireworks-container"></div>
+
+            <h1 class="magical-text">Quest Complete!</h1>
+            <p id="final-message">Magnificent! You've unveiled the secret, Félicia! The destination is:</p>
+            <h2 id="full-coordinates" class="magical-text-coords">LAT, LON</h2>
+            <a id="map-link" href="https://www.google.com/maps/place/4+Rue+Dr+L%C3%A9on+Mischo,+9032+Warken+Ettelbruck/@49.8574221,6.0901155,17z/data=!3m1!4b1!4m6!3m5!1s0x479555886e9df03f:0x43ab81ac2405edbb!8m2!3d49.8574221!4d6.0901155!16s%2Fg%2F11l24btwz3?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" class="hp-button">See on Marauder's Map (View Map)</a>
+            <p>Prepare for your next great adventure! ✨</p>
+        </section>
+
+    </div>
+
+    <!-- Link JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
